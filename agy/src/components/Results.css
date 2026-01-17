@@ -1,0 +1,150 @@
+.results-section {
+    background: var(--color-bg-alt);
+}
+
+.results-banner-container {
+    margin-bottom: 4rem;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 4px solid white;
+}
+
+.results-banner {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.carousel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.carousel-header h3 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}
+
+.carousel-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-btn {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text);
+    transition: all 0.2s;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background: var(--color-primary);
+    color: white;
+}
+
+.nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    padding: 1rem 0;
+    /* Space for shadows */
+    margin: -1rem 0;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.student-card-wrapper {
+    padding: 0 1rem;
+}
+
+.student-card {
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    height: 100%;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+}
+
+.student-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--color-bg-alt);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+}
+
+.student-name {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-secondary);
+}
+
+.student-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.badge-medical {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+.badge-engineering {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    /* Blue for Engineering */
+    color: white;
+}
+
+.student-college {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .student-card-wrapper {
+        flex: 0 0 100% !important;
+        /* Single card on mobile */
+    }
+}
